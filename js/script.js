@@ -20,3 +20,122 @@ function animacaoCarregamento(frase, pontos = 3, tempo = 300) {
     }
     console.log();
 }
+
+//  Funções de batalha
+function receberAtaque(forcaAtacante, vidaAlvo, defesaAlvo, defender) {
+    let dano;
+    if (!defender) {
+        dano = Math.floor(Math.random() * (forcaAtacante + 1));
+    } else {
+        const reducao = forcaAtacante * (defesaAlvo / 100);
+        dano = Math.max(0, Math.floor(Math.random() * forcaAtacante - reducao));
+    }
+    return Math.max(0, vidaAlvo - dano);
+}
+
+function fugir(alvo, indice, nomeHeroi) {
+    let fuga = Math.floor(Math.random() * 2);
+    if (fuga === 0) {
+        escreverComDelay("Você não conseguiu fugir.");
+        return false;
+    } else {
+        escreverComDelay(`${nomeHeroi} foi veloz o suficiente e conseguiu fugir de ${alvo[indice].nome}!`);
+        return true;
+    }
+}
+
+function batalha(forca, defesa, vida, nomeHeroi, alvo, indice) {
+    let batalhar = true;
+    let vidaHeroiAtual = vida;
+
+    if (alvo[indice].nome === "Code-Red, o Último Dragão Ancestral") {
+        escreverComDelay(`\n ${nomeHeroi} encara Code-Red, o Último Dragão Ancestral...`);
+        escreverComDelay("Code-Red ruge com fúria ancestral!");
+        animacaoCarregamento("Desferindo golpe inicial");
+        const golpeInicial = Math.floor(alvo[indice].forca * 1.5);
+        vidaHeroiAtual = Math.max(0, vidaHeroiAtual - golpeInicial);
+        escreverComDelay(`Code-Red causa ${golpeInicial} de dano! Vida de ${nomeHeroi}: ${vidaHeroiAtual}`);
+        if (vidaHeroiAtual <= 0) {
+            escreverComDelay(`💀 ${nomeHeroi} foi destruído pelo golpe inicial de Zarion...`);
+            return "morto";
+        } else {
+            escreverComDelay(`${nomeHeroi} sobrevive por milagre... mas está gravemente ferido.`);
+        }
+    }
+
+    while (batalhar) {
+        escreverComDelay(`\nVocê está batalhando com ${alvo[indice].nome}, o que fará?`);
+        console.log("[1] - Atacar");
+        console.log("[2] - Fugir");
+        console.log("[3] - Defender");
+
+        const escolha = parseInt(readline.question("Escolha: "));
+
+        if (escolha === 1) {
+            animacaoCarregamento("Você prepara seu ataque");
+            escreverComDelay(`Você atacou ${alvo[indice].nome}!`);
+            alvo[indice].vida = receberAtaque(forca, alvo[indice].vida, alvo[indice].defesa, false);
+            escreverComDelay(`${alvo[indice].nome} está com ${alvo[indice].vida} pontos de vida.`);
+
+            if (alvo[indice].vida <= 0) {
+                escreverComDelay(`Você derrotou ${alvo[indice].nome}!`);
+                batalhar = false;
+                break;
+            }
+
+            vidaHeroiAtual = receberAtaque(alvo[indice].forca, vidaHeroiAtual, defesa, false);
+            escreverComDelay(`${nomeHeroi} está com ${vidaHeroiAtual} pontos de vida.`);
+
+            if (vidaHeroiAtual <= 0) {
+                escreverComDelay(`${nomeHeroi} foi derrotado por ${alvo[indice].nome}...`);
+                batalhar = false;
+                return "morto";
+            }
+
+        } else if (escolha === 2) {
+            if (alvo[indice].nome === "Code-Red, o Último Dragão Ancestral") {
+                escreverComDelay(`\nCode-Red não permite fuga!`);
+                animacaoCarregamento("Desferindo golpe final");
+                const golpeFinal = alvo[indice].forca * 3;
+                vidaHeroiAtual = Math.max(0, vidaHeroiAtual - golpeFinal);
+                escreverComDelay(` Code-Red causa ${golpeFinal} de dano! Vida de ${nomeHeroi}: ${vidaHeroiAtual}`);
+                escreverComDelay(` ${nomeHeroi} foi destruído ao tentar fugir de Zarion...`);
+                batalhar = false;
+                return "morto";
+            } else {
+                if (fugir(alvo, indice, nomeHeroi)) {
+                    batalhar = false;
+                    break;
+                } else {
+                    escreverComDelay(`${alvo[indice].nome} impede sua fuga e contra-ataca!`);
+                    vidaHeroiAtual = receberAtaque(alvo[indice].forca, vidaHeroiAtual, defesa, false);
+                    escreverComDelay(`${alvo[indice].nome} ataca! Vida de ${nomeHeroi}: ${vidaHeroiAtual}`);
+                    if (vidaHeroiAtual <= 0) {
+                        escreverComDelay(` ${nomeHeroi} foi derrotado ao tentar fugir...`);
+                        batalhar = false;
+                        return "morto";
+                    }
+                }
+            }
+
+        } else if (escolha === 3) {
+            escreverComDelay(`${nomeHeroi} se prepara para se defender...`);
+            vidaHeroiAtual = receberAtaque(alvo[indice].forca, vidaHeroiAtual, defesa, true);
+            escreverComDelay(`${alvo[indice].nome} ataca! Vida de ${nomeHeroi}: ${vidaHeroiAtual}`);
+
+            if (vidaHeroiAtual <= 0) {
+                escreverComDelay(`${nomeHeroi} foi derrotado mesmo tentando se defender...`);
+                batalhar = false;
+                return "morto";
+            } else {
+                const cura = Math.floor(Math.random() * 6) + 5; // cura entre 5 e 10
+                vidaHeroiAtual += cura;
+                escreverComDelay(`${nomeHeroi} se recupera durante a defesa e ganha ${cura} pontos de vida.`);
+                escreverComDelay(` Vida atual de ${nomeHeroi}: ${vidaHeroiAtual}`);
+            }
+
+        } else {
+            escreverComDelay("Opção inválida! Escolha uma opção que faça sentido.\n");
+        }
+    }
+}
