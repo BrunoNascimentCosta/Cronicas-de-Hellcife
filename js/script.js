@@ -170,3 +170,90 @@ while (!jornadaIniciar) {
         escreverComDelay(`\n${nomeHeroi} decide aguardar um pouco mais...`);
     }
 }
+
+// Inimigos
+const inimigos = [
+    { nome: "Isalyn, a Visionária das Ideia", vida: 40, forca: 10, defesa: 5 },
+    { nome: "Camilis, a Teredora de Emoções", vida: 60, forca: 12, defesa: 8 },
+    { nome: "Brunor, o Guardião da Ordem", vida: 50, forca: 14, defesa: 6 },
+    { nome: "Daven, o Observador Silencioso", vida: 70, forca: 16, defesa: 10 },
+    { nome: "Rafara, a Comandante do Progresso", vida: 80, forca: 18, defesa: 12 },
+    { nome: "Stefira, a Guardiã Serena", vida: 100, forca: 20, defesa: 15 },
+    { nome: "Code-Red, o Último Dragão Ancestral", vida: 120, forca: 22, defesa: 18 }
+];
+// Combate contra os inimigos
+let heroiVivo = true;
+
+for (let i = 0; i < inimigos.length && heroiVivo; i++) {
+    
+    //  Isalyn
+    if (inimigos[i].nome === "Isalyn, a Visionária das Ideia") {
+        //narração 
+        escreverComDelay(`\nApós deixar as ruínas da PE-XV, ${nomeHeroi} segue por uma trilha coberta de névoa que parece viva.`);
+        escreverComDelay("Cada passo ecoa como se o mundo estivesse ouvindo.");
+        escreverComDelay("Ao final da trilha, uma porta de pedra se abre sozinha, revelando um salão distorcido pela imaginação.");
+        //dialogo de ambiente 
+        escreverComDelay("Você adentra um salão coberto por névoa ilusória.");
+        escreverComDelay("As paredes parecem se mover, sussurrando ideias que não são suas.");
+        escreverComDelay("No centro, Isalyn surge como um pensamento distorcido, moldado pela própria imaginação.");
+    }
+
+     //  Camilis
+    if (inimigos[i].nome === "Camilis, a Teredora de Emoções") {
+        //narração
+        escreverComDelay(`\nDeixando para trás o salão ilusório, ${nomeHeroi} atravessa um bosque onde as árvores choram em silêncio.`);
+        escreverComDelay("O ar é pesado, e memórias esquecidas parecem sussurrar entre os galhos.");
+        escreverComDelay("No centro do bosque, um jardim encantado floresce em meio à dor.");
+        //dialogo de ambiente 
+        escreverComDelay("Você chega a um jardim abandonado, onde flores murchas exalam tristeza.");
+        escreverComDelay("O ar é pesado com lembranças esquecidas e sentimentos não resolvidos.");
+        escreverComDelay("Camilis aparece entre os espinhos, sorrindo com melancolia e olhos que choram sem lágrimas.");
+    }
+
+    //  Brunor
+    if (inimigos[i].nome === "Brunor, o Guardião da Ordem") {
+        //narração
+        escreverComDelay(`\n Após vencer Camilis, ${nomeHeroi} encontra uma escadaria de mármore que leva a um terminal abandonado chamado Pelópidas.`);
+        escreverComDelay("Runas brilham nas paredes, e o silêncio é absoluto.");
+        escreverComDelay("Ali, a ordem é lei — e qualquer desvio será julgado sem piedade.");
+        //dialogo de ambiente 
+        escreverComDelay(" Um portão de pedra se ergue diante de você, marcado por runas de disciplina.");
+        escreverComDelay("O chão é simétrico, os ventos seguem padrões exatos.");
+        escreverComDelay("Brunor está parado como uma estátua viva, pronto para julgar qualquer desvio da ordem.");
+    }
+
+    //  Daven
+    if (inimigos[i].nome === "Daven, o Observador Silencioso") {
+        //narração
+        escreverComDelay(`\nDeixando o terminal, ${nomeHeroi} desce por uma fenda estreita até uma caverna profunda.`);
+        escreverComDelay("A escuridão é total, e o som do próprio coração parece alto demais.");
+        escreverComDelay("No centro da caverna, olhos brilham na escuridão, observando cada movimento.");
+        //dialogo de ambiente 
+        escreverComDelay("Você entra na antiga usina de Abreu e Lima, onde o silêncio é absoluto.");
+        escreverComDelay("Som nenhum ecoa, mas você sente que está sendo observado.");
+        escreverComDelay("Daven surge das sombras, como se já soubesse seu próximo movimento.");
+    }
+
+    //  Rafara
+    if (inimigos[i].nome === "Rafara, a Comandante do Progresso") {
+        //narração
+        escreverComDelay(`\n Após escapar das sombras, ${nomeHeroi} emerge de um engenho subterrâneo cheio de engrenagens e vapor.`);
+        escreverComDelay("O chão vibra com energia, e o tempo parece correr mais rápido ali.");
+        escreverComDelay("No centro, máquinas se abrem para revelar uma comandante fria e precisa.");
+        //dialogo de ambiente 
+        escreverComDelay(" Você pisa em um chão metálico, com engrenagens girando ao redor.");
+        escreverComDelay("Tubos fumegantes e cristais energizados iluminam o caminho com luz fria.");
+        escreverComDelay("Rafara aparece com armaduras tecnológicas e olhos calculistas, pronta para otimizar sua destruição.");
+    }
+
+    //  Stefira
+    if (inimigos[i].nome === "Stefira, a Guardiã Serena") {
+        //narração
+        escreverComDelay(`\n Após vencer Rafa, ${nomeHeroi} atravessa um portal de Cruz de Rebolça  e se vê em um campo sereno.`);
+        escreverComDelay("Flores brancas dançam ao vento, e o som de água corrente acalma a alma.");
+        escreverComDelay("Mas a paz aqui é protegida com força e sabedoria.");
+        //dialogo de ambiente 
+        escreverComDelay(" Um campo de flores brancas se estende diante de você, embalado por uma brisa suave.");
+        escreverComDelay("O som de água corrente e pássaros distantes cria uma paz inquietante.");
+        escreverComDelay("Stefira está no centro, em meditação, mas seus olhos revelam que ela está pronta para proteger o equilíbrio.");
+    }
