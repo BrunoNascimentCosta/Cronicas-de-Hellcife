@@ -139,3 +139,34 @@ function batalha(forca, defesa, vida, nomeHeroi, alvo, indice) {
         }
     }
 }
+
+//  Introdução
+let classe, vida, forca, defesa;
+
+escreverComDelay(`Há muito tempo, no coração do Reino de Hellcife...`);
+escreverComDelay(`O caos tomou conta após o desaparecimento de um grande mestre dos magos Fellype Cross!`);
+escreverComDelay(`Dizem que ele foi capturado por um terrível Dragão das Sombras e levado para as montanhas de Igarasselva...`);
+escreverComDelay(`Agora, o destino do Hellcife depende de um novo herói que ouse enfrentá-lo.`);
+escreverComDelay(`E esse herói... é você?!`);
+
+const nomeHeroi = readline.question("Qual é o nome do seu herói? ");
+
+const classeHeroi = readline.question("Digite o número da classe:\n[1] - Guerreiro\n[2] - Mago\n[3] - Aventureiro: ");
+switch (classeHeroi) {
+    case '1': classe = "Guerreiro"; vida = 120; forca = 15; defesa = 10; break;
+    case '2': classe = "Mago"; vida = 80; forca = 25; defesa = 5; break;
+    case '3': classe = "Aventureiro"; vida = 100; forca = 10; defesa = 5; break;
+}
+
+escreverComDelay(`Olá, ${nomeHeroi}, você escolheu a classe: ${classe}!\nSua aventura começa agora...\n`);
+
+let jornadaIniciar = false;
+while (!jornadaIniciar) {
+    const inicio = readline.question(`\nDeseja partir agora para as ruínas da PE-XV?\n[S] - Sim\n[N] - Ainda não: `).toLowerCase();
+    if (inicio === 's') {
+        jornadaIniciar = true;
+        escreverComDelay(`\nCom determinação nos olhos, ${nomeHeroi} parte rumo às ruínas da PE-XV.`);
+    } else {
+        escreverComDelay(`\n${nomeHeroi} decide aguardar um pouco mais...`);
+    }
+}
