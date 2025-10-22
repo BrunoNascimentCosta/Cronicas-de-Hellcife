@@ -257,3 +257,27 @@ for (let i = 0; i < inimigos.length && heroiVivo; i++) {
         escreverComDelay("O som de água corrente e pássaros distantes cria uma paz inquietante.");
         escreverComDelay("Stefira está no centro, em meditação, mas seus olhos revelam que ela está pronta para proteger o equilíbrio.");
     }
+}
+ // Code-Red
+    if (inimigos[i].nome === "Code-Red, o Último Dragão Ancestral") {
+        //narração
+        escreverComDelay(`\n Com o campo atrás de si, ${nomeHeroi} chega ao coração das ruínas de Igarasselva.`);
+        escreverComDelay("O chão treme, o céu escurece, e uma cratera se abre revelando fogo e fúria.");
+        escreverComDelay("Code-Red desperta, e o mundo prende a respiração.");
+        escreverComDelay("A batalha final se aproxima... mas o destino ainda guarda uma última surpresa.");
+        escreverComDelay(" Uma luz dourada rasga os céus. O Mestre dos Magos, enfraquecido mas determinado, aparece flutuando sobre a cratera.");
+        escreverComDelay(`“Você chegou até aqui, ${nomeHeroi}. Mas Zarion não cairá por força comum.”`);
+        escreverComDelay(" Ele ergue seu cajado e canaliza sua essência mágica diretamente para o herói.");
+        escreverComDelay("“Receba meu último dom. Que a sabedoria dos antigos corra em suas veias.”");
+        escreverComDelay("Você foi fortalecido com magia ancestral!");
+        //dialo de ambiente
+        escreverComDelay("As ruínas tremem. O céu escurece. O ar se torna denso como fumaça.");
+        escreverComDelay("Você desce até uma cratera ancestral, onde o chão pulsa com energia dracônica.");
+        escreverComDelay("Zarion emerge das profundezas, envolto em chamas negras e ódio milenar.");
+
+        vida += 40;
+        forca += 15;
+        defesa += 10;
+
+        escreverComDelay(` Atributos finais ➜ Vida: ${vida} | Força: ${forca} | Defesa: ${defesa}`);
+    }
