@@ -1,6 +1,8 @@
-<p align="center">
+  <p align="center">
   <img src="img/CronicasdeHellcife.png" alt="Banner Crônicas de Hellcife" />
 </p>
+
+<h1 align="center">⚔️ Crônicas de Hellcife</h1>
 <h1 align="center">⚔️ Crônicas de Hellcife</h1>
 
 <p align="center">
