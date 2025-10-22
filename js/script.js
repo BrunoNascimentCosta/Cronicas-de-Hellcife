@@ -142,6 +142,15 @@ function batalha(forca, defesa, vida, nomeHeroi, alvo, indice) {
 
 //  Introdução
 let classe, vida, forca, defesa;
+//Inserindo o Título
+const titulo = "CRÔNICAS DE HELL4IFE";
+const tituloEspacado = titulo.split("").join(" ");
+const linha = "*".repeat(tituloEspacado.length + 4);
+//Modura para o Título 
+console.log("\n" + linha);
+console.log(`* ${tituloEspacado} *`);
+console.log(linha + "\n");
+
 
 escreverComDelay(`Há muito tempo, no coração do Reino de Hellcife...`);
 escreverComDelay(`O caos tomou conta após o desaparecimento de um grande mestre dos magos Fellype Cross!`);
