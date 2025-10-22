@@ -298,4 +298,25 @@ for (let i = 0; i < inimigos.length && heroiVivo; i++) {
               escreverComDelay(` Novos atributos → Vida: ${vida} | Força: ${forca} | Defesa: ${defesa}`);
           }
     }
-    
+if (heroiVivo) {
+    escreverComDelay(`\nCom o último inimigo derrotado, o silêncio toma conta das ruínas de Igarasselva.`);
+escreverComDelay("O ar vibra com uma energia antiga, como se o próprio mundo estivesse agradecendo.");
+escreverComDelay(`Entre os escombros, ${nomeHeroi} encontra uma câmara selada por magia ancestral.`);
+
+escreverComDelay("Ao tocar o símbolo gravado na porta, ela se desfaz em luz.");
+escreverComDelay("Dentro, envolto por correntes de sombra, está o Mestre dos Magos Fellype Cross — enfraquecido, mas vivo.");
+
+escreverComDelay(`\n Com um gesto firme, ${nomeHeroi} quebra o selo e liberta o velho sábio.`);
+escreverComDelay("Seus olhos se abrem lentamente, e um sorriso surge em seu rosto cansado.");
+
+escreverComDelay(`“Você conseguiu...” diz o Mestre Fellype Cross. “A luz voltou a brilhar em Igarasselva.”`);
+escreverComDelay(`“O mundo não será mais o mesmo, ${nomeHeroi}. Você não é apenas um herói... é uma lenda.”`);
+
+escreverComDelay("\n Ao sair das ruínas, o céu se abre em cores que não eram vistas há séculos.");
+escreverComDelay("O povo de Igarasselva celebra. Bardos cantam. Crianças brincam com espadas de madeira, sonhando ser como você.");
+
+escreverComDelay(`\n Parabéns, ${nomeHeroi}! Você salvou o Mestre dos Magos Fellype Cross e restaurou a esperança no mundo.`);
+escreverComDelay("Sua história será contada por gerações — não como um conto, mas como verdade.");
+}
+
+escreverComDelay("\n🏁 Fim da jornada. Obrigado por jogar!");
