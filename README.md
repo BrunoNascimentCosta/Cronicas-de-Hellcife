@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="LINK_DA_IMAGEM_AQUI" alt="Guerreiro, Castelo e Dragão" />
+  <img src="img/CronicasdeHellcife.png" alt="Banner Crônicas de Hellcife" />
 </p>
-
 <h1 align="center">⚔️ Crônicas de Hellcife</h1>
 
 <p align="center">
