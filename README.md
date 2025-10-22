@@ -1,4 +1,4 @@
-# Cronicas-de-Hellcife
+
 <p align="center">
   <img src="https://copilot.microsoft.com/th/id/BCO.7c17a998-2693-4339-946c-897340e5294f.png" alt="Guerreiro, Castelo e Dragão" />
 </p>
