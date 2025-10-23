@@ -1,7 +1,11 @@
-<p align="center">
-  <img src="img/CronicasdeHellcife.png" alt="Banner Crônicas de Hellcife" />
-</p>
 <h1 align="center">⚔️ Crônicas de Hellcife</h1>
+  
+  
+  <p align="center">
+  <img src="img/Um guerreiro medieva.png" alt="Banner Crônicas de Hellcife" />
+</p>
+
+
 
 <p align="center">
   <i>Onde guerreiros enfrentam lendas, castelos guardam segredos, e dragões dominam os céus.</i><br>
