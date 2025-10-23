@@ -10,7 +10,7 @@
 </p>
 <hr>
 
-### "Crônicas de Hellcife" é um projeto feito para o projeto Start Fullstack Recife 2025, da Rede Cidadã, para desafiar seus conhecimentos relacionados à lógica de programação dos desenvolvedores.
+### "Crônicas de Hellcife" é um projeto feito para o projeto Start Fullstack Recife 2025, da Rede Cidadã, para desafiar os conhecimentos relacionados à lógica de programação dos desenvolvedores.
 Os integrantes do grupo - Camila, Bruno, David, Isabela, Rafaela e Stefany - tiveram que desenvolver um RPG utilizando apenas Node.Js e sua lógica de programação.
 
 O seu objetivo dentro de Crônicas de Hellcife é percorrer as ruínas de Igarasselva e resgatar o Mestre dos Magos Fellype Cross. Para chegar a o seu objetivo, você deve derrotar todos os seus adversários, até chegar ao Cod Red - o último e o mais forte de seus inimigos.
@@ -23,6 +23,6 @@ O seu objetivo dentro de Crônicas de Hellcife é percorrer as ruínas de Igaras
 - Durante a batalha, fugir.
 
 ### Como jogar?
-Para jogar, você deve digitar `node script.js` no terminal da sua IDE que suporte o Node.Js.
+Para jogar, você deve digitar ```node script.js``` no terminal da sua IDE que suporte o Node.Js.
 
 
