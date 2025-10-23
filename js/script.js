@@ -292,22 +292,22 @@ for (let i = 0; i < inimigos.length && heroiVivo; i++) {
             
         }
         //Batalha 
-          escreverComDelay(`\n ${nomeHeroi} enfrenta ${inimigos[i].nome}!`);
-          const resultado = batalha(forca, defesa, vida, nomeHeroi, inimigos, i);
-      
-          if (resultado === "morto") {
-              heroiVivo = false;
-              escreverComDelay(`\n A jornada de ${nomeHeroi} chegou ao fim...`);
-          }
-          //  Evolução após o 5º inimigo
-          if (i === 4 && heroiVivo) {
-              escreverComDelay(`\nApós derrotar ${inimigos[i].nome}, ${nomeHeroi} sente uma energia ancestral fluindo em seu corpo.`);
-              escreverComDelay("Você foi fortalecido pela jornada!");
-              vida += 20;
-              forca += 5;
-              defesa += 5;
-              escreverComDelay(` Novos atributos → Vida: ${vida} | Força: ${forca} | Defesa: ${defesa}`);
-          }
+        escreverComDelay(`\n ${nomeHeroi} enfrenta ${inimigos[i].nome}!`);
+        const resultado = batalha(forca, defesa, vida, nomeHeroi, inimigos, i);
+    
+        if (resultado === "morto") {
+            heroiVivo = false;
+            escreverComDelay(`\n A jornada de ${nomeHeroi} chegou ao fim...`);
+        }
+        //  Evolução após o 5º inimigo
+        if (i === 4 && heroiVivo) {
+            escreverComDelay(`\nApós derrotar ${inimigos[i].nome}, ${nomeHeroi} sente uma energia ancestral fluindo em seu corpo.`);
+            escreverComDelay("Você foi fortalecido pela jornada!");
+            vida += 20;
+            forca += 5;
+            defesa += 5;
+            escreverComDelay(` Novos atributos → Vida: ${vida} | Força: ${forca} | Defesa: ${defesa}`);
+        }
     }
 if (heroiVivo) {
     escreverComDelay(`\nCom o último inimigo derrotado, o silêncio toma conta das ruínas de Igarasselva.`);
